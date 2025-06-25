@@ -1,9 +1,19 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import ProjectImage from '../components/ProjectImage'
+import CurrentWorkSection from '../components/CurrentWorkSection'
 import styles from '../styles/Home.module.css'
 
 export default function Home() {
+  // Sample current work projects data
+  const currentWorkProjects = [
+    {
+      title: "Portfolio Website",
+      image: "/images/dev_com_design_project.png",
+      url: "https://github.com/DrDevEli/portfolio"
+    }
+  ]
+
   return (
     <>
       <Head>
@@ -41,7 +51,7 @@ export default function Home() {
         {/* Hero Section */}
         <section className={styles.hero} id="home">
           <h1>FullStack Developer</h1>
-          <h2>I'm Eliano Miguel</h2>
+          <h2>I&apos;m Eliano Miguel</h2>
           <Image
             className={styles.profileImage}
             src="/images/perfil.fotoo.jpeg"
@@ -106,23 +116,7 @@ export default function Home() {
       </div>
 
       {/* Current Work Section */}
-      <div className={styles.currentWorkContainer} id="current-work">
-        <h1>Current Work</h1>
-        <div className={styles.projects}>
-          <ProjectImage
-            id="currentWork1"
-            src="/images/project1.jpg"
-            alt="Current project 1"
-            repoUrl="https://github.com/DrDevEli/dbank2"
-          />
-          <ProjectImage
-            id="currentWork2"
-            src="/images/project2.jpg"
-            alt="Current project 2" 
-            repoUrl="https://github.com/DrDevEli/booksServiceApi"
-          />
-        </div>
-      </div>
+      <CurrentWorkSection projects={currentWorkProjects} />
 
       {/* About Section */}
       <div className={styles.middleContainerAbout} id="about">
@@ -148,21 +142,21 @@ export default function Home() {
             id="projectsHTML"
             src="/images/Angela-recipe-HTML.png"
             alt="Angela-recipe"
-            repoUrl="https://github.com/DrDevEli/recipe-html-project"
+            repoUrl="https://github.com/DrDevEli/HTML_Basics"
           />
           <h3>HTML</h3>
           <ProjectImage
             id="projectsCSS"
             src="/images/dev_com_design_project.png"
             alt="webDesign-project"
-            repoUrl="https://github.com/DrDevEli/dev-com-design-project"
+            repoUrl="https://github.com/DrDevEli/CSS_Basics"
           />
           <h3>CSS</h3>
           <ProjectImage
             id="projectsJS"
             src="/images/Drum-kit-DOM.png"
             alt="Drum-kit-project"
-            repoUrl="https://github.com/DrDevEli/drum-kit-dom"
+            repoUrl="https://github.com/DrDevEli/JavaScript-DOM_CHALLENGE-"
           />
           <h3>JavaScript</h3>
         </div>

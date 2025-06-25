@@ -1,31 +1,56 @@
-#Aider
+# Aider metadata
 .aider*
+
 # OS metadata
 .DS_Store
+Thumbs.db
 
-# Yarn error logs
-yarn-error.log
-
-# Dependencies
-node_modules/
-
-# Build files
+# Logs
 *.log
-*.lock
-
-# Debug logs
 npm-debug.log*
 yarn-debug.log*
+yarn-error.log*
 
-# Environment files
+# Dependency directories
+node_modules/
+
+# Build output
+.next/
+out/
+dist/
+
+# Static exports
+.exported/
+
+# Environment variables
 .env*
 !.env.example
 
-# IDE files
+# Lock files (optional - choose only one package manager)
+# If using yarn, you might want to ignore package-lock.json
+# If using npm, you might want to ignore yarn.lock
+package-lock.json
+yarn.lock
+
+# Test coverage
+coverage/
+
+# IDE/editor configs
 .vscode/
 .idea/
 *.swp
 *.swo
 
-# Test coverage
-coverage/
+# Typescript build artifacts
+*.tsbuildinfo
+
+# Optional: Mac/Linux temporary files
+*.pid
+*.seed
+*.pid.lock
+
+# Optional: VSCode settings (use only if you don’t want to share workspace settings)
+.vscode/*
+
+# Optional: Next.js telemetry
+.next-tasks/

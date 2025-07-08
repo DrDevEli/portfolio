@@ -1,8 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: 'export',           // for static export
-  trailingSlash: true,        // optional
-  basePath: '/Portfolio',     // if deploying to a subpath (e.g., GitHub Pages)
+  output: 'export',
+  trailingSlash: true,
+  basePath: '/Portfolio',
   images: {
     unoptimized: true,        // required for static export with <Image />
     remotePatterns: [

@@ -1,10 +1,12 @@
-import SocialLinks from './SocialLinks';
+import React from 'react';
 
-export default function Footer() {
+const Footer: React.FC = () => {
   return (
     <footer className="footer">
-      <SocialLinks />
-      <p>© {new Date().getFullYear()} My Portfolio</p>
+      <div>© {new Date().getFullYear()} Eliano Miguel</div>
+      {/* Add SocialLinks here if needed */}
     </footer>
   );
-}
+};
+
+export default Footer;

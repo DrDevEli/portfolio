@@ -1,5 +1,32 @@
 @import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Kode+Mono:wght@400..700&display=swap');
 
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  background-image: url('/images/ferenc-horvath-unsplash.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  color: var(--gold);
+  min-height: 100vh;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* ================
+   CSS Variables
+   ================ */
 :root {
   --gold: #dbcd90;
   --font-mono: "Kode Mono", monospace;
@@ -7,45 +34,35 @@
   --spacing-md: 1.5rem;
   --spacing-lg: 2rem;
   --border-radius: 8px;
+  --transition: all 0.3s ease;
+  --shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  --shadow-hover: 0 8px 16px rgba(0, 0, 0, 0.3);
 }
 
-* {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
+/* Global utility classes */
+.fadeIn {
+  animation: fadeInUp 0.6s ease-out;
 }
 
-html {
-  font-size: 14px;
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
-body {
-  width: 100%;
-  min-height: 100vh;
-  overflow-x: hidden;
-  color: var(--gold);
-  font-family: var(--font-mono);
-  line-height: 1.5;
+/* Ensure images are responsive */
+img {
+  max-width: 100%;
+  height: auto;
 }
 
-p {
-  width: 70%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  margin: 35px auto;
-  font-size: 1.65rem;
-  border: 3px solid #fff;
-  padding: 15px;
-}
-
-html {
-  font-size: 15.4px; /* 14px + 10% */
-}
-
-@media (min-width: 768px) {
+@media (prefers-color-scheme: dark) {
   html {
-    font-size: 17.6px; /* 16px + 10% */
+    color-scheme: dark;
   }
 }

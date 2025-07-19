@@ -1,30 +1,75 @@
-import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
-import './globals.css'
-import Navbar from '../components/Navbar'
-import Footer from '../components/Footer'
+import type { Metadata, Viewport } from 'next';
+import { Inter } from 'next/font/google';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import '../styles/globals.css';
 
-const inter = Inter({ subsets: ['latin'] })
+const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: 'Portfolio',
-  description: 'Professional portfolio',
-}
+  title: 'Eliano Miguel - FullStack Developer',
+  description: 'Portfolio of Eliano Miguel, a passionate FullStack Developer specializing in JavaScript, Node.js, and modern web technologies. Based in Berlin, Germany.',
+  keywords: 'fullstack developer, javascript, nodejs, react, nextjs, web development, berlin',
+  authors: [{ name: 'Eliano Miguel' }],
+  creator: 'Eliano Miguel',
+  publisher: 'Eliano Miguel',
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
+  },
+  openGraph: {
+    title: 'Eliano Miguel - FullStack Developer',
+    description: 'Portfolio of Eliano Miguel, a passionate FullStack Developer specializing in JavaScript, Node.js, and modern web technologies.',
+    url: 'https://drdeveli.github.io',
+    siteName: 'Eliano Miguel Portfolio',
+    images: [
+      {
+        url: '/images/perfil.fotoo.jpeg',
+        width: 1200,
+        height: 630,
+        alt: 'Eliano Miguel - FullStack Developer',
+      },
+    ],
+    locale: 'en_US',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Eliano Miguel - FullStack Developer',
+    description: 'Portfolio of Eliano Miguel, a passionate FullStack Developer specializing in JavaScript, Node.js, and modern web technologies.',
+    images: ['/images/perfil.fotoo.jpeg'],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
+};
+
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 1,
+  userScalable: false,
+  themeColor: '#dbcd90',
+};
 
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode
+  children: React.ReactNode;
 }) {
   return (
     <html lang="en">
-      <body className={`${inter.className} min-h-screen flex flex-col`}>
-        <Navbar />
-        <main className="flex-grow container mx-auto px-4 py-8">
-          {children}
-        </main>
-        <Footer />
+      <body className={inter.className}>
+        {children}
       </body>
     </html>
-  )
+  );
 }

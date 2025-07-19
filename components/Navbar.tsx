@@ -1,12 +1,12 @@
-import Link from 'next/link';
+import React from 'react';
 
-export default function Navbar() {
+const Navbar: React.FC = () => {
   return (
     <nav className="navbar">
-      <Link href="/">Home</Link>
-      <Link href="/about">About</Link>
-      <Link href="/projects">Projects</Link>
-      <Link href="/contact">Contact</Link>
+      <div className="navbar-brand">Eliano Miguel</div>
+      {/* Add navigation links and SocialLinks here if needed */}
     </nav>
   );
-}
+};
+
+export default Navbar;

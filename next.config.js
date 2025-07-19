@@ -2,7 +2,7 @@
 const nextConfig = {
   output: 'export',
   trailingSlash: true,
-  basePath: '/Portfolio',
+  // basePath: '/Portfolio',   // <--- comment out or remove this line
   images: {
     unoptimized: true,        // required for static export with <Image />
     remotePatterns: [

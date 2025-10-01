@@ -194,8 +194,9 @@
     margin: 50px auto;
     padding: 2rem;
     background: rgba(0, 0, 0, 0.2);
+    border: 3px dotted var(--gold);
     border-radius: 15px;
-    animation: fadeInUp 0.6s ease-out;
+    animation: fadeInUp 0.6s ease-out, morph 8s ease-in-out infinite;
     width: 90%;
     max-width: 1200px;
     text-align: center;
@@ -280,10 +281,12 @@
     margin: 30px auto;
     padding: 2rem;
     background: rgba(0, 0, 0, 0.2);
+    border: 3px dotted var(--gold);
     border-radius: 15px;
     width: 90%;
     max-width: 1200px;
     color: var(--gold);
+    animation: morph 5s ease-in-out infinite;
 }
 
 .middleContainerAbout h1 {
@@ -311,7 +314,7 @@
 
 .pcWithLights {
     border: 3px dotted var(--gold);
-    animation: slides 8s ease-in-out infinite;
+    animation: morph 8s ease-in-out infinite;
     border-radius: 15px;
     margin-bottom: 2rem;
     transition: var(--transition);
@@ -330,9 +333,11 @@
     margin: 50px auto;
     padding: 2rem;
     background: rgba(0, 0, 0, 0.2);
+    border: 3px dotted var(--gold);
     border-radius: 15px;
     width: 90%;
     max-width: 1200px;
+    animation: morph 8s ease-in-out infinite;
 }
 
 .middleContainerProjects h1 {
@@ -404,7 +409,9 @@
     align-items: center;
     padding: 2rem;
     background: rgba(0, 0, 0, 0.2);
+    border: 3px dotted var(--gold);
     border-radius: 15px;
+    animation: morph 8s ease-in-out infinite;
 }
 
 .contact {
@@ -448,9 +455,11 @@
     margin: 30px auto;
     padding: 2rem;
     background: rgba(0, 0, 0, 0.2);
+    border: 3px dotted var(--gold);
     border-radius: 15px;
     width: 90%;
     max-width: 1200px;
+    animation: morph 8s ease-in-out infinite;
 }
 
 .selfDescription {
@@ -463,12 +472,13 @@
     margin: 0 auto 2rem;
     font-size: 1.2rem;
     line-height: 1.7;
-    border: 3px solid #fff;
+    border: 1.5px dotted var(--gold);
     padding: 20px;
     border-radius: 15px;
     background: rgba(0, 0, 0, 0.1);
     text-align: center;
     color: var(--gold);
+    animation: morph 8s ease-in-out infinite;
 }
 
 .socialLinks {
@@ -542,14 +552,22 @@
     background: rgba(0, 0, 0, 0.2);
     border-radius: 15px;
     padding: 1.5rem;
-    border: 1px solid rgba(219, 205, 144, 0.2);
+    border: 3px dotted var(--gold);
     transition: var(--transition);
+    width: 90%;
+    max-width: 1200px;
+    animation: morph 8s ease-in-out infinite;
 }
 
 .cardStyle:hover {
     transform: translateY(-5px);
     box-shadow: 0 10px 20px rgba(219, 205, 144, 0.2);
     border-color: rgba(219, 205, 144, 0.4);
+}
+
+/* Current Work Section */
+.current-work-container div {
+    animation: morph 8s ease-in-out infinite;
 }
 
 .buttonStyle {
